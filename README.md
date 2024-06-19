@@ -7,7 +7,9 @@ chain, but can also be run on its own, by defaulting to the `data` folder.
 
 There are two veld code services here:
 
-- veld_train: trains a word2vec model, based on a text file, where each line is a sentence. 
+- [veld_train](./veld_train.yaml): trains a word2vec model, based on a text file, where each line is
+  a sentence. 
 
-- veld_infer: launches a jupyter notebook to use a word2vec model for arbitrary inference.
+- [veld_infer](./veld_infer.yaml): launches a jupyter notebook to use a word2vec model for arbitrary
+  inference.
 
