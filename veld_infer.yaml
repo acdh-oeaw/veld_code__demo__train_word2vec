@@ -27,6 +27,7 @@ services:
     working_dir: /veld/code/
     volumes:
       - ./src/infer/:/veld/code/
+      - ./data/model/:/veld/input/
     environment:
       in_model_file: null
 
