@@ -6,43 +6,35 @@ x-veld:
 
     inputs:
       volume: /veld/input/
-      file_formats:
-        - "csv"
-        - "txt"
+      file_formats: "txt"
       contents: 
         - "NLP training data"
         - "NLP data"
 
     outputs:
       volume: /veld/output/
-      file_formats: "word2vec model"
+      file_formats: "word2vec"
       contents:
         - "NLP model"
         - "word embeddings model"
 
     environment:
-      train_data_path:
-        description: "path to training data file"
-        type: path
-        path_prefix: "/veld/input/"
-      train_data_description:
-        description: "short human description for the kind of training data"
-        type: string
-        optional: true
-      model_path:
-        description: "path to model file"
-        type: path
-        path_prefix: "/veld/output/"
-      training_architecture:
-        description: "short label for the overall training setup"
-        type: string
-      model_id: 
-        description: "id for the specific model"
-        type: string
+      in_train_data_file:
+        description: "name of training data file"
+        type: file
+        volume: /veld/input/
+      out_model_file:
+        description: "name of model file"
+        type: file
+        volume: /veld/output/
+      epochs: 
+        description: "word2vec hyperparameter"
+        type: int
+        default: 100
       vector_size: 
         description: "word2vec hyperparameter"
         type: int
-        default: 500
+        default: 300
       window: 
         description: "word2vec hyperparameter"
         type: int
@@ -50,7 +42,7 @@ x-veld:
       min_count: 
         description: "word2vec hyperparameter"
         type: int
-        default: 5
+        default: 3
           
 services:
   veld_train:
@@ -63,8 +55,8 @@ services:
       in_train_data_file: null
       out_model_file: null
       epochs: 100
-      vector_size: 500
+      vector_size: 300
       window: 5
-      min_count: 5
+      min_count: 3
 
 

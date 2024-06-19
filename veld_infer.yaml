@@ -7,16 +7,7 @@ x-veld:
 
     inputs:
       volume: /veld/input/
-      file_formats:
-        - "csv"
-        - "txt"
-      contents: 
-        - "NLP training data"
-        - "NLP data"
-
-    outputs:
-      volume: /veld/output/
-      file_formats: "word2vec model"
+      file_formats: "word2vec"
       contents:
         - "NLP model"
         - "word embeddings model"
