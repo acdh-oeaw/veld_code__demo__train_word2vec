@@ -1,5 +1,7 @@
 # veld_code__demo__train_word2vec
 
+**Used in chain:** https://github.com/acdh-oeaw/veld_chain__demo__word2vec
+
 This is a demo veld code repo. It contains code that is mainly intended to be integrated into a veld
 chain, but can also be run on its own, by defaulting to the `data` folder.
 
