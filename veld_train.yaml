@@ -1,15 +1,16 @@
 x-veld:
   code:
     about:
-      description:
+      description: "training of a word2vec model"
       topics:
+        - "NLP"
+        - "word embeddings"
 
     inputs:
       volume: /veld/input/
       file_formats: "txt"
       contents: 
-        - "NLP training data"
-        - "NLP data"
+        - "word2vec training data"
 
     outputs:
       volume: /veld/output/
