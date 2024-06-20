@@ -62,4 +62,3 @@ services:
       window: 5
       min_count: 3
 
-
